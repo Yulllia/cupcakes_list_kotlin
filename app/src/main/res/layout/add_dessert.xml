@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="center">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/scrollView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="0dp"
+        android:text="Додати десерти"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/scrollView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="136dp"
+        android:layout_marginBottom="88dp"
+        app:layout_constraintBottom_toBottomOf="@+id/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/spinnerDesserts"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:entries="@array/desserts_array"
+                android:textAlignment="center" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addTitleDessert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/include"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/include">
+
+                <EditText
+                    android:id="@+id/editTextTitleDessert"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="8dp"
+                    android:focusable="true"
+                    android:hint="Введіть назву десерту"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:keyboardNavigationCluster="true"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="120dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addInside"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addTitleDessert">
+
+                <EditText
+                    android:id="@+id/editTextAddInside"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="8dp"
+                    android:focusable="true"
+                    android:hint="Начинка десерту"
+                    android:inputType="text"
+                    android:keyboardNavigationCluster="true"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="203dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ingredients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/addInside"
+                tools:layout_editor_absoluteX="43dp">
+
+                <EditText
+                    android:id="@+id/editTextIngredients"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="8dp"
+                    android:focusable="true"
+                    android:hint="Інгредієнти"
+                    android:inputType="text"
+                    android:keyboardNavigationCluster="true"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.65"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="282dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/containsInside"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/ingredients"
+                tools:layout_editor_absoluteX="43dp">
+
+                <EditText
+                    android:id="@+id/editTextContainsInside"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="8dp"
+                    android:focusable="true"
+                    android:hint="Начинки десерту на ваш вибір"
+                    android:inputType="text"
+                    android:keyboardNavigationCluster="true"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.65"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="282dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/containsInside"
+                tools:layout_editor_absoluteX="43dp">
+
+                <EditText
+                    android:id="@+id/editTextPrice"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="8dp"
+                    android:focusable="true"
+                    android:hint="Ціна"
+                    android:inputType="text"
+                    android:keyboardNavigationCluster="true"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.65"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="282dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Button to open the image selector-->
+            <Button
+                android:id="@+id/BSelectImage"
+                android:layout_width="294dp"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="0dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="Вибрати зображення"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/imageViewAdd"
+                android:layout_width="367dp"
+                android:layout_height="350dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:foregroundGravity="center"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/saveDessert"
+                android:visibility="gone"
+                android:layout_width="294dp"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="7dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="Зберегти зображення"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+
+

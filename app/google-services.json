@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "363711286586",
+    "firebase_url": "https://cupcakes-list-desserts-default-rtdb.firebaseio.com",
+    "project_id": "cupcakes-list-desserts",
+    "storage_bucket": "cupcakes-list-desserts.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:363711286586:android:6ccb97267159a4acacd403",
+        "android_client_info": {
+          "package_name": "com.example.cupcakeslist"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdrWE8ac62H7-ZwiW7m-xEehzJQrTp8to"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

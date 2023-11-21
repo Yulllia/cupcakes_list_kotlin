@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="NavbarTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize the overflow icon color to be white -->
+        <item name="android:actionOverflowButtonStyle">@style/OverflowButtonStyle</item>
+    </style>
+
+    <style name="OverflowButtonStyle" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:tint">@color/white</item>
+    </style>
+</resources>

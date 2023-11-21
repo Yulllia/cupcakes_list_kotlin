@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BoldText">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="LinkText">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@android:anim/slide_in_left</item>
+        <item name="android:windowExitAnimation">@android:anim/slide_out_right</item>
+    </style>
+
+    <style name="ImagePreviewerTheme" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowIsFloating">true</item>
+    </style>
+    <style name="BottomNavigation">
+        <item name="android:background">@color/colorButtons</item>
+        <item name="itemBackground">@color/colorBackground</item>
+        <item name="itemIconTint">@color/white</item>
+        <item name="itemTextColor">@color/white</item>
+        <item name="backgroundTint">@color/black</item>
+    </style>
+</resources>

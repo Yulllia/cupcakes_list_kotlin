@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/delivery2">
+    <fragment
+        android:id="@+id/my_self"
+        android:name="com.example.cupcakeslist.fragments.MySelfFragment"
+        android:label="CurrentFragment" >
+        <action
+            android:id="@+id/action_currentFragment_to_contactFragment"
+            app:destination="@id/contacts"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popUpTo="@id/my_self" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/contacts"
+        android:label="ContactFragment"
+        android:name="com.example.cupcakeslist.fragments.ContactFragment" >
+        <!-- Define your ContactFragment content here -->
+    </fragment>
+    <fragment
+        android:id="@+id/delivery2"
+        android:name="com.example.cupcakeslist.fragments.Delivery"
+        android:label="Delivery" >
+        <action
+            android:id="@+id/action_delivery2_to_contacts"
+            app:destination="@id/contacts" />
+    </fragment>
+
+
+    <activity
+        android:id="@+id/registerFragment"
+        android:name="com.example.cupcakeslist.register.Register"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </activity>
+    <activity
+        android:id="@+id/loginFragment"
+        android:name="com.example.cupcakeslist.register.SignIn"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_signin" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/registerFragment" />
+    </activity>
+
+</navigation>
